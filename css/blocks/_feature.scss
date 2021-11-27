@@ -1,0 +1,16 @@
+.feature {
+  display: flex;
+  align-items: center;
+}
+
+.feature__icon {
+  width: 35px;
+  margin-right: 14px;
+}
+
+.feature__text {
+  font-weight: bold;
+  max-width: 90px;
+  font-size: 16px;
+  line-height: 1.2;
+}
