@@ -4,6 +4,7 @@ $baseFontSize: 18px;
 //colors
 $yellow: #FEDB3F;
 $yellowDark: #FFD517;
+$black:#292929;
 
 //normalize
 @import "normalize";
@@ -22,6 +23,10 @@ $yellowDark: #FFD517;
 @import "blocks/button";
 @import "blocks/features";
 @import "blocks/feature";
+@import "blocks/section";
+@import "blocks/headline";
+@import "blocks/advantages";
+@import "blocks/advantage";
 
 
 

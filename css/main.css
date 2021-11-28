@@ -353,7 +353,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  color: #fff;
+  color: #666;
 }
 
 .wrapper {
@@ -419,6 +419,7 @@ img {
   background-color: #1968B1;
   height: 100vh;
   min-height: 652px;
+  color: #fff;
 }
 
 .hero__container {
@@ -561,4 +562,113 @@ img {
   max-width: 90px;
   font-size: 16px;
   line-height: 1.2;
+}
+
+.section {
+  height: 100vh;
+  min-height: 652px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #666666;
+}
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #292929;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 49px;
+}
+.headline__title {
+  margin-bottom: 12px;
+}
+.headline__subtitle {
+  text-align: center;
+  padding: 0 27%;
+  line-height: 1.25;
+}
+
+.advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.advantages__item {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 2.2%;
+}
+.advantages__item:first-child {
+  padding-left: 0;
+}
+.advantages__item:last-child {
+  padding-right: 0;
+}
+.advantages__item:last-child:before {
+  display: none;
+}
+.advantages__item:before {
+  content: url("../img/decor/circles.png");
+  position: absolute;
+  right: 0;
+  top: 59px;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}
+
+.advantage {
+  text-align: center;
+}
+
+.advantage__img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 17px;
+}
+
+.advantage__img-wrapper {
+  width: 128px;
+  height: 128px;
+  position: relative;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.advantage__icon {
+  width: 64px;
+  height: 68px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.advantage__title {
+  font-size: 27px;
+  color: #292929;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.advantage__desc {
+  line-height: 1.25;
 }

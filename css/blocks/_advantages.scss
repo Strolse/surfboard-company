@@ -1,0 +1,29 @@
+
+.advantages {
+  display: flex;
+}
+
+.advantages__item {
+  position: relative;
+  flex: 1;
+  padding: 0 2.2%;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    &:before {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: url("../img/decor/circles.png");
+    position: absolute;
+    right: 0;
+    top: 59px;
+    transform: translate(50%);
+  }
+}
