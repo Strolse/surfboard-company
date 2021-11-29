@@ -10,7 +10,7 @@ $black:#292929;
 @import "normalize";
 
 //setups
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;0,800;1,500&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,500&family=Open+Sans&display=swap" rel="stylesheet');
 @import "layout";
 
 //blocks
@@ -27,7 +27,11 @@ $black:#292929;
 @import "blocks/headline";
 @import "blocks/advantages";
 @import "blocks/advantage";
-
+@import "blocks/reviews";
+@import "blocks/avatar-click";
+@import "blocks/order-section";
+@import "blocks/form";
+@import "blocks/radio";
 
 
 
