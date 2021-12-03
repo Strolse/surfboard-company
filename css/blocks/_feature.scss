@@ -4,13 +4,13 @@
 }
 
 .feature__icon {
-  width: 35px;
-  margin-right: 14px;
+  width: rem(35px);
+  margin-right: rem(14px);
 }
 
 .feature__text {
   font-weight: bold;
-  max-width: 90px;
-  font-size: 16px;
+  max-width: rem(90px);
+  font-size: rem(16px);
   line-height: 1.2;
 }

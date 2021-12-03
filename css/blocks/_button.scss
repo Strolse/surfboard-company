@@ -1,11 +1,12 @@
 .button {
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: 800;
   line-height: 1;
-  padding: 22px 41px;
-  border-radius: 100px;
+  padding: rem(22px) rem(41px);
+  border-radius: rem(100px);
   background: $yellow;
   &:hover {
     background: $yellowDark;

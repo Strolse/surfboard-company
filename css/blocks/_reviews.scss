@@ -1,7 +1,7 @@
 .reviews__display {
   background: #F8FAF9;
-  padding: 42px;
-  margin-bottom: 15px;
+  padding: rem(42px);
+  margin-bottom: rem(15px);
 }
 
 .reviews__content {
@@ -10,9 +10,9 @@
 }
 
 .reviews__avatar {
-  width: 253px;
-  height: 264px;
-  margin-right: 40px;
+  width: rem(253px);
+  height: rem(264px);
+  margin-right: rem(40px);
 }
 
 .reviews__photo {
@@ -27,14 +27,14 @@
 }
 
 .reviews__title {
-  font-size: 27px;
+  font-size: rem(27px);
   font-weight: bold;
   color: $black;
-  margin-bottom: 12px;
+  margin-bottom: rem(12px);
 }
 
 .reviews__text {
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
   line-height: 1.25;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .reviews__switcher-item {
-  margin-right: 6px;
+  margin-right: rem(6px);
   &:last-child {
     margin-right: 0;
   }
