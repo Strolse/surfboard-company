@@ -4,6 +4,12 @@
   height: 100vh;
   min-height: rem(652px);
   color: #fff;
+
+  @include tablets {
+    position: relative;
+    background: url("../img/hero-background-tablets.png");
+    background-color: #1968B1;
+  }
 }
 
 .hero__container {
@@ -16,6 +22,17 @@
 
 .hero__content {
   width: 55%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30%;
+  }
 }
 
 .hero__title {
@@ -25,9 +42,19 @@
   text-transform: uppercase;
   margin-bottom: rem(14px);
   padding-right: 5%;
+
+  @include tablets {
+    padding-right: 0;
+  }
 }
 
 .hero__text {
   font-size: rem(21px);
   margin-bottom: rem(30px);
+}
+
+.hero__icons {
+    @include tablets {
+      display: none;
+    }
 }

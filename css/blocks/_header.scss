@@ -1,6 +1,21 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+
+  @include tablets {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: rem(26px) rem(30px);
+    background-color: #1968B1;
+    align-items: center;
+  }
 }
 
+.header__contacts {
+  @include tablets {
+    display: none;
+  }
+}

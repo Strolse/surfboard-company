@@ -1,12 +1,16 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $yellow: #FEDB3F;
 $yellowDark: #FFD517;
 $black:#292929;
 
-//media
 @import "media";
 
 //normalize
@@ -27,6 +31,7 @@ $z-fixed-menu: 100;
 @import "blocks/logo";
 @import "blocks/menu";
 @import "blocks/contacts";
+@import "blocks/hamburger";
 @import "blocks/button";
 @import "blocks/features";
 @import "blocks/feature";

@@ -1,9 +1,14 @@
+.contacts {
+  flex-shrink: 0;
+}
+
 .contacts__phone {
   text-decoration: none;
   font-size: rem(22px);
   font-weight: bold;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .contacts__icon-elem {
