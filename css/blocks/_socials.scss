@@ -1,0 +1,26 @@
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-right: rem(14px);
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
+  &:hover {
+    .socials__icon {
+      fill: $black;
+    }
+  }
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  fill: #B3B3B3;
+}

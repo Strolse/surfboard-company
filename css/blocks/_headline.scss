@@ -2,6 +2,10 @@
   text-align: center;
   margin-bottom: rem(49px);
 
+  // @include phones {
+  //   margin-bottom: rem(4px);
+  // }
+
   &__title {
     margin-bottom: rem(12px);
   }
@@ -11,8 +15,8 @@
     padding: 0 27%;
     line-height: 1.25;
 
-    @include phones {
-      padding: 0 3%;
+    @include tablets {
+      padding: 0 20%;
     }
   }
 }

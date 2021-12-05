@@ -7,7 +7,7 @@
 
   @include tablets {
     position: relative;
-    background: url("../img/hero-background-tablets.png");
+    background: url("../img/hero-background-tablets.png") center top / cover no-repeat;
     background-color: #1968B1;
   }
 }
@@ -46,11 +46,25 @@
   @include tablets {
     padding-right: 0;
   }
+
+  @include phones {
+    line-height: 1;
+  }
 }
 
 .hero__text {
-  font-size: rem(21px);
+  font-size: 21px;
   margin-bottom: rem(30px);
+
+  @include phones {
+    font-size: 18px;
+  }
+}
+
+.button.hero__button {
+    @include phones {
+      font-size: 18px;
+    }
 }
 
 .hero__icons {

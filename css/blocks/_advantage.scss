@@ -18,8 +18,8 @@
 }
 
 .advantage__img-wrapper {
-  width: rem(128px);
-  height: rem(128px);
+  width: 128px;
+  height: 128px;
   position: relative;
   background: #F2F5F4;
   border-radius: 50%;
@@ -27,8 +27,8 @@
 }
 
 .advantage__icon {
-  width: rem(64px);
-  height: rem(68px);
+  width: 64px;
+  height: 68px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,7 +36,7 @@
 }
 
 .advantage__title {
-  font-size: rem(27px);
+  font-size: 27px;
   color: $black;
   font-weight: bold;
   margin-bottom: rem(18px);

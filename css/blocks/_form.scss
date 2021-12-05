@@ -5,7 +5,7 @@
 
   @include tablets{
     flex-direction: column;
-    max-width: rem(466px);
+    padding: 0 17%;
     margin: 0 auto;
   }
 }
@@ -103,6 +103,10 @@
   color: #fff;
   margin-left: rem(17px);
   display: inline-flex;
+
+  &:hover {
+    color: $yellow;
+  }
 
   @include tablets {
     margin-left: rem(25px);

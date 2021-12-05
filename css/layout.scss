@@ -8,7 +8,6 @@ html {
 
 html, body {
   height: 100%;
-
 }
 
 body {
@@ -18,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   color: #666;
-  font-size: rem(18px);
+  font-size: $baseFontSize;
 }
 
 .wrapper{
