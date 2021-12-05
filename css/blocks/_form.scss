@@ -52,7 +52,6 @@
   }
 }
 
-
 .form__input {
   width: 100%;
   padding: rem(18px) rem(12px);
@@ -90,6 +89,10 @@
 
   @include tablets {
     padding-bottom: rem(20px);
+  }
+
+  @include phones {
+    justify-content: center;
   }
 }
 

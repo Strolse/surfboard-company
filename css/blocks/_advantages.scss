@@ -1,12 +1,20 @@
-
 .advantages {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .advantages__item {
   position: relative;
   flex: 1;
   padding: 0 2.2%;
+
+  @include phones {
+    padding: 0;    
+    margin-bottom: rem(30px);
+  }
 
   &:first-child {
     padding-left: 0;
@@ -16,6 +24,10 @@
     padding-right: 0;
     &:before {
       display: none;
+    }
+
+    @include phones {
+      margin-bottom: 0;
     }
   }
 

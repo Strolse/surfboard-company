@@ -345,6 +345,11 @@ template {
 html {
   font-size: 18px;
 }
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+}
 
 html, body {
   height: 100%;
@@ -357,6 +362,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   color: #666;
+  font-size: 1rem;
 }
 
 .wrapper {
@@ -758,11 +764,24 @@ img {
   padding: 0 27%;
   line-height: 1.25;
 }
+@media screen and (max-width: 480px) {
+  .headline__subtitle {
+    padding: 0 3%;
+  }
+}
 
 .advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .advantages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .advantages__item {
@@ -772,6 +791,12 @@ img {
           flex: 1;
   padding: 0 2.2%;
 }
+@media screen and (max-width: 480px) {
+  .advantages__item {
+    padding: 0;
+    margin-bottom: 1.6666666667rem;
+  }
+}
 .advantages__item:first-child {
   padding-left: 0;
 }
@@ -780,6 +805,11 @@ img {
 }
 .advantages__item:last-child:before {
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .advantages__item:last-child {
+    margin-bottom: 0;
+  }
 }
 .advantages__item:before {
   content: url("../img/decor/circles.png");
@@ -798,12 +828,26 @@ img {
 .advantage {
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .advantage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
+}
 
 .advantage__img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 0.9444444444rem;
+}
+@media screen and (max-width: 480px) {
+  .advantage__img {
+    margin-bottom: 0;
+    margin-right: 0.6666666667rem;
+  }
 }
 
 .advantage__img-wrapper {
@@ -1087,6 +1131,13 @@ img {
     padding-bottom: 1.1111111111rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .form__controls {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .form__button {
   border: none;
@@ -1165,4 +1216,29 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: none;
+}
+
+.adress {
+  position: relative;
+  background: url("../img/map.jpg") center bottom/cover no-repeat;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 1.5555555556rem 0;
+  color: #292929;
+  font-size: 1.1666666667rem;
 }

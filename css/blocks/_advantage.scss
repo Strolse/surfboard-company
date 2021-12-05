@@ -1,10 +1,20 @@
 .advantage {
   text-align: center;
+
+  @include phones {
+    display: flex;
+    text-align: left;
+  }
 }
 
 .advantage__img {
   display: inline-flex;
   margin-bottom: rem(17px);
+
+  @include phones {
+    margin-bottom: 0;
+    margin-right: rem(12px);
+  }
 }
 
 .advantage__img-wrapper {
