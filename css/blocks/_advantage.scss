@@ -36,10 +36,10 @@
 }
 
 .advantage__title {
-  font-size: 27px;
+  font-size: rem(27px);
   color: $black;
   font-weight: bold;
-  margin-bottom: rem(18px);
+  margin-bottom: rem(12px);
 }
 
 .advantage__desc {

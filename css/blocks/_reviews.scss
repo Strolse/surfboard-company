@@ -4,7 +4,7 @@
   margin-bottom: rem(15px);
 
   @include tablets {
-    padding: 56px 18px 22px;
+    padding: rem(56px) rem(18px) rem(22px);
     margin-bottom: rem(30px);
   }
 }
@@ -25,10 +25,10 @@
   margin-right: rem(40px);
 
   @include tablets {
-    width: 130px;
-    height: 130px;
+    width: rem(130px);
+    height: rem(130px);
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
   }
 }
 
@@ -44,12 +44,11 @@
 
   @include tablets {
     padding-right: 0;
-
   }
 }
 
 .reviews__title {
-  font-size: 27px;
+  font-size: rem(27px);
   font-weight: bold;
   color: $black;
   margin-bottom: rem(12px);

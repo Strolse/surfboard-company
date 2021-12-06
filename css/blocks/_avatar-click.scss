@@ -4,6 +4,11 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+
+  @include phones {
+    width: rem(64px);
+    height: rem(64px);
+  }
   
   &--active {
     &:before {
@@ -14,6 +19,12 @@
       border: rem(6px) solid $yellow;
       position: absolute;
       display: block;
+
+      @include phones {
+        width: rem(56px);
+        height: rem(56px);
+        border: rem(4px) solid $yellow;
+      }
     }
   }
 }

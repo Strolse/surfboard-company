@@ -13,3 +13,9 @@
     @content;    
   }
 }
+
+@mixin smartphones {
+  @media screen and (max-width: $smartphones) {
+    @content;    
+  }
+}

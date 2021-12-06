@@ -8,6 +8,10 @@
 
   &__title {
     margin-bottom: rem(12px);
+
+    @include phones {
+      margin-bottom: rem(9px);
+    }
   }
 
   &__subtitle {
@@ -18,5 +22,10 @@
     @include tablets {
       padding: 0 20%;
     }
+
+    @include phones {
+      padding: 0 3%;
+
+    };
   }
 }

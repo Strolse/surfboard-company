@@ -1,6 +1,12 @@
 .footer__container {
   display: flex;
   justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+
+  }
 }
 
 .footer {
@@ -14,8 +20,16 @@
   font-size: rem(21px);
 }
 
+.footer__contacts {
+  @include phones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .footer__number {
-  font-size: 21px;
+  font-size: rem(21px);
   font-weight: normal;
 }
 
