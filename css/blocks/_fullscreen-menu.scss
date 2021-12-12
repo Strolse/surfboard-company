@@ -1,0 +1,22 @@
+.fullscreen-menu {
+  position: fixed;
+  display: none;
+  background-color: #333537;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  &__close{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+
+  &__elem {
+    width: rem(20px);
+    height: rem(20px);
+    fill: #fff;
+  }
+
+}

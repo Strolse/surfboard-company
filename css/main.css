@@ -608,11 +608,31 @@ img {
 .menu {
   margin: 0 0.5555555556rem;
   padding-top: 0.2777777778rem;
+  font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
   }
+}
+.menu--vertical {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 20%;
+}
+.menu--vertical .menu__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu--vertical .menu__item {
+  margin-right: 0;
+  margin-bottom: 1.1111111111rem;
 }
 
 .menu__list {
@@ -639,7 +659,6 @@ img {
 
 .menu__link {
   text-decoration: none;
-  font-weight: bold;
   white-space: nowrap;
 }
 
@@ -1366,4 +1385,24 @@ img {
   width: 20px;
   height: 20px;
   fill: #B3B3B3;
+}
+
+.fullscreen-menu {
+  position: fixed;
+  display: none;
+  background-color: #333537;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.fullscreen-menu__close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+.fullscreen-menu__elem {
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+  fill: #fff;
 }
