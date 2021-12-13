@@ -1,0 +1,155 @@
+.product {
+  display: flex;
+  align-items: flex-end;
+  
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product__col {
+ flex: 1;
+
+ @include tablets{
+   margin-bottom: rem(40px);
+   flex: 0;
+
+   &:last-child {margin-bottom: 0;}
+ }
+
+ @include phones {
+   margin-bottom: rem(60px);
+ }
+
+}
+
+.product__img-elem {
+  width: rem(396px);
+  height: rem(378px);
+  fill: #ECECEC;
+  display: block;
+
+  @include tablets {
+    width: rem(308px);
+    height: rem(294px);  
+  }
+
+  @include phones {
+    width: rem(244px);
+    height: rem(232px);  
+  }
+}
+
+.product__img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+
+  @include tablets {
+    padding-right: 0;
+    justify-content: flex-start;
+    }
+}
+
+.product__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -55%);
+
+  @include tablets {
+    width: rem(318px);
+    height: rem(418px);  
+  }
+
+  @include phones {
+    width: rem(252px);
+    height: rem(332px);  
+  }
+}
+
+.product__container {
+  padding: 0 6% 0 15%;
+  line-height: 1.2;
+}
+
+.product__content {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3% 0;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+
+}
+
+.product__title {
+  font-size: rem(36px);
+  font-weight: bold;
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: rem(20px);
+
+  @include tablets {
+    font-size: rem(30px);
+  }
+}
+
+.product__description {
+  margin-bottom: rem(25px);
+
+  @include tablets {
+    text-align: center;
+  }
+
+}
+
+.product__features {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(10px);
+
+}
+.product__feature {
+  display: flex;
+  flex-direction: column;
+  margin: 0 rem(52px) rem(10px) 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets{
+    justify-content: center;
+  }
+}
+
+.product__feature-text {
+  font-weight: bold;
+  color: #000;
+}
+
+.product__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include tablets{
+    justify-content: center;
+  }
+}
+
+.product__price {
+  font-size: rem(60px);
+  color: #151515;
+  font-weight: 300;
+  white-space: nowrap;
+  padding: 0 rem(10px);
+}
