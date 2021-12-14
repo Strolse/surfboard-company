@@ -1,1 +1,39 @@
+.products-slider {
+  position: relative;
+}
 
+.products-slider__arrow {
+  text-decoration: none;
+
+}
+
+.products-slider__arrow-left {
+  fill: #F8FAF9;
+  stroke: #000;
+  left: 0;
+  margin-left: -24px;
+  position: absolute;
+  bottom: 50%;
+
+  @include tablets {
+    bottom: 75%;;
+    margin-left: 0;
+    left: 10%;
+  }
+
+}
+
+.products-slider__arrow-right {
+  fill: #F8FAF9;
+  stroke: #000;
+  right: 0;
+  margin-right: -24px;
+  position: absolute;
+  bottom: 50%;
+
+  @include tablets {
+    bottom: 75%;;
+    margin-right: 0;
+    right: 10%;
+  }
+}

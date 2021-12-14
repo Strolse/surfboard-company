@@ -1,0 +1,22 @@
+.detail {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.detail__img {
+  margin-right: 14px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.detail__title {
+  flex: 1;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.detail__description {
+  white-space: nowrap;
+}
