@@ -94,7 +94,16 @@
 
   <symbol id="right" viewBox="0 0 24 40">
     <path d="M5 6L17.0858 18.0858C17.8668 18.8668 17.8668 20.1332 17.0858 20.9142L5 33" stroke-width="2" stroke-linecap="round"/>
-  </symbol>    
+  </symbol>  
+
+  <symbol id="triangle-up" viewBox="0 0 8 8">
+    <path d="M4.00002 0.5L7.89713 7.25L0.102901 7.25L4.00002 0.5Z"/>
+  </symbol>
+
+  <symbol id="triangle-down" viewBox="0 0 8 7">
+    <path d="M4 7L0.102887 0.249999L7.89711 0.25L4 7Z"/> 
+  </symbol>
+
   <symbol id="">
     
   </symbol>
