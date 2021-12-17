@@ -1,48 +1,48 @@
 .details {
-    &:hover {
+  &:hover {
 
-    .details__button{
-      pointer-events: visible;
-      background-color: #3465A3;  
-    }
-    .details__dropdown {
-      opacity: 1;
-    }
+  .details__button{
+    pointer-events: visible;
+    background-color: #3465A3;  
   }
+  .details__dropdown {
+    opacity: 1;
+  }
+}
 
-  @include tablets {
-    display: none;
-  }
+@include tablets {
+  display: none;
+}
 }
 
 .details__link {
-  text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
+text-decoration: none;
+display: flex;
+flex-wrap: wrap;
 }
 
 .details__button {
-  background-color: #3A587E;
-  width: 90px;
-  height: 90px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+background-color: #3A587E;
+width: 90px;
+height: 90px;
+border-radius: 4px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 .details__sign {
-  width: 38px;
-  height: 38px;
-  fill: #fff;
+width: 38px;
+height: 38px;
+fill: #fff;
 }
 
 .details__text {
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: bold;
+color: #fff;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: bold;
 }
 
 .details__dropdown {
@@ -53,21 +53,21 @@ opacity: 0;
 }
 
 .details__list {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(40px);
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 32px 28px;
-  border-radius: 4px;
-  color: #000;
+background: rgba(255, 255, 255, 0.8);
+backdrop-filter: blur(40px);
+display: flex;
+flex-direction: column;
+font-size: 16px;
+font-weight: 500;
+padding: 32px 28px;
+border-radius: 4px;
+color: #000;
 }
 
 .details__item{
-  margin-bottom: 28px;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
+margin-bottom: 28px;
+
+&:last-child {
+  margin-bottom: 0;
+}
 }

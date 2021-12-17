@@ -15,3 +15,5 @@ close.addEventListener("click", function(event){
   fullscreenMenu.style.display = "none";
   menu.style.display = "none";
 })
+
+

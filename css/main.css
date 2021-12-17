@@ -1337,6 +1337,123 @@ img {
   white-space: nowrap;
 }
 
+.team-section__title {
+  margin-bottom: 50px;
+}
+
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.team--version--desktop .team__item {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 14px;
+}
+.team--version--desktop .team__item:last-child {
+  margin-right: 0;
+}
+.team--version--desktop .team__content {
+  position: absolute;
+  top: 100%;
+}
+@media screen and (max-width: 768px) {
+  .team--version--desktop {
+    display: none;
+  }
+}
+.team--version--mobile {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .team--version--mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.team--version--mobile .team__content-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+}
+
+.team__item {
+  max-width: 12.2222222222rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .team__item {
+    margin-bottom: 0.8888888889rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__item {
+    margin-bottom: 0.3333333333rem;
+  }
+}
+
+.team__member {
+  max-height: 16.1111111111rem;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .team__member {
+    width: 7.6666666667rem;
+  }
+}
+
+.team__member-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.team__title {
+  border: none;
+}
+
+.team__title-name {
+  font-size: 1.1666666667rem;
+  font-weight: 700;
+  color: #292929;
+}
+
+.team__content {
+  height: 0;
+  overflow: hidden;
+}
+
+.team__content-title {
+  color: #292929;
+}
+
+.team__content-text {
+  font-weight: 300;
+}
+
 .reviews__display {
   background: #F8FAF9;
   padding: 2.3333333333rem;

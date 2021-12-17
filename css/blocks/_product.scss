@@ -96,9 +96,7 @@
 
 .product__details {
   position: absolute;
-  bottom: 50%;
-
-  
+  bottom: 50%;  
 }
 
 .product__title {
@@ -119,7 +117,6 @@
   @include tablets {
     text-align: center;
   }
-
 }
 
 .product__features {
