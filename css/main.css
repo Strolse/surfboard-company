@@ -1437,11 +1437,19 @@ img {
 }
 
 .team__title {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team__title-svg {
+  fill: #292929;
 }
 
 .team__title-name {
@@ -1476,6 +1484,28 @@ img {
     padding: 3.1111111111rem 1rem 1.2222222222rem;
     margin-bottom: 1.6666666667rem;
   }
+}
+
+.reviews__list {
+  position: relative;
+  min-height: 348px;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.reviews__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
 }
 
 .reviews__content {
@@ -1575,7 +1605,7 @@ img {
     height: 3.5555555556rem;
   }
 }
-.avatar-click--active:before {
+.avatar-click.active:before {
   content: "";
   width: 3.4444444444rem;
   height: 3.4444444444rem;
@@ -1585,7 +1615,7 @@ img {
   display: block;
 }
 @media screen and (max-width: 480px) {
-  .avatar-click--active:before {
+  .avatar-click.active:before {
     width: 3.1111111111rem;
     height: 3.1111111111rem;
     border: 0.2222222222rem solid #FEDB3F;

@@ -1,0 +1,6 @@
+// $('.products').bxSlider({
+//   preloadImages:'all'
+// }
+
+
+// );

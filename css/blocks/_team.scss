@@ -1,7 +1,7 @@
 .team {
   display: flex;
   justify-content: space-between;
-
+  
   &--version--desktop {
 
     .team__item {
@@ -22,7 +22,6 @@
     @include tablets {
       display: none;
     }
-
   }
 
   &--version--mobile {
@@ -62,7 +61,6 @@
 
   @include phones {
     width: rem(138px);
-
   }
 }
 
@@ -73,9 +71,15 @@
 }
 
 .team__title {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   display: inline-flex;
+  align-items: center;
+}
+
+.team__title-svg {
+  fill: $black;
 }
 
 .team__title-name {

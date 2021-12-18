@@ -9,6 +9,29 @@
   }
 }
 
+.reviews__list {
+  position: relative;
+  min-height: 348px;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+
+  &.active {
+    position: static;
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+}
+
 .reviews__content {
   display: flex;
   align-items: center;
