@@ -15,4 +15,8 @@
   font-weight: 500;
   color: #000;
   margin-bottom: 18px;
+
+  &.error {
+    color: rgb(224, 2, 2);
+  }
 }

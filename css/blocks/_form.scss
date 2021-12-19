@@ -64,6 +64,10 @@
   font-family: 'Open Sans', Helvetica, sans-serif;
   color: #000;
 
+  &.error {
+    border-color: rgb(224, 2, 2);
+  }
+
   @include tablets {
     padding: rem(8px) rem(10px);
   }
@@ -122,3 +126,4 @@
     justify-content: center;
   }
 }
+
