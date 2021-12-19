@@ -1803,6 +1803,32 @@ img {
   }
 }
 
+.modal {
+  display: none;
+  padding: 0;
+}
+
+.modal__content {
+  background-color: #fff;
+  padding: 37px 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__text {
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 18px;
+}
+
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
