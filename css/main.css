@@ -953,6 +953,12 @@ img {
 .products-slider {
   position: relative;
 }
+.products-slider .bx-wrapper {
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 
 .products-slider__arrow {
   text-decoration: none;
@@ -1813,7 +1819,7 @@ img {
 
 .modal__content {
   background-color: #fff;
-  padding: 37px 66px;
+  padding: 2.0555555556rem 3.6666666667rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1829,7 +1835,7 @@ img {
 .modal__text {
   font-weight: 500;
   color: #000;
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
 }
 .modal__text.error {
   color: #e00202;

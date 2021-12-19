@@ -5,7 +5,7 @@
 
 .modal__content{
   background-color: #fff;
-  padding: 37px 66px;
+  padding: rem(37px) rem(66px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@
 .modal__text {
   font-weight: 500;
   color: #000;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
 
   &.error {
     color: rgb(224, 2, 2);
