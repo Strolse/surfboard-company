@@ -1,7 +1,7 @@
 $('.form').on('submit', e =>{
   e.preventDefault();
 
-  const form = $('e.currentTarget');
+  const form = $(e.currentTarget);
   const name = form.find("[name='name']");
   const phone = form.find("[name='phone']");
   const comment = form.find("[name='comment']");
@@ -14,8 +14,8 @@ $('.form').on('submit', e =>{
       name: name.val(),
       phone: phone.val(),
       comment: comment.val(),
-      to: to.val()
-    }
+      to: to.val(),
+    },
   })
 
   // $.fancybox.open({
@@ -25,7 +25,7 @@ $('.form').on('submit', e =>{
   // })
 })
 
-$(".app-modal-close").on('click', e =>{
-  e.preventDefault();
-  $.fancybox.close();
-})
+// $(".app-modal-close").on('click', e =>{
+//   e.preventDefault();
+//   $.fancybox.close();
+// })
