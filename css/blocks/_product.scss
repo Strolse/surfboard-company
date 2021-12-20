@@ -1,11 +1,12 @@
 .product {
   display: flex;
   align-items: flex-end;
+  padding: 150px 0 90px;
   
   @include tablets {
     flex-direction: column;
     align-items: center;
-    padding-top: 0;
+  
   }
 }
 

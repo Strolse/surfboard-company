@@ -958,6 +958,7 @@ img {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin-bottom: 0;
 }
 
 .products-slider__arrow {
@@ -1003,6 +1004,7 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding: 150px 0 90px;
 }
 @media screen and (max-width: 768px) {
   .product {
@@ -1013,7 +1015,6 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 0;
   }
 }
 
@@ -1281,6 +1282,7 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   opacity: 0;
+  pointer-events: none;
 }
 
 .details__list {
