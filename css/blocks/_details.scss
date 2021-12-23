@@ -1,14 +1,6 @@
 .details {
-  &:hover {
 
-  .details__button{
-    pointer-events: visible;
-    background-color: #3465A3;  
-  }
-  .details__dropdown {
-    opacity: 1;
-  }
-}
+
 
 @include tablets {
   display: none;
@@ -17,11 +9,6 @@
 
 .details__link {
 text-decoration: none;
-display: flex;
-flex-wrap: wrap;
-}
-
-.details__button {
 background-color: #3A587E;
 width: 90px;
 height: 90px;
@@ -30,6 +17,27 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+}
+
+.details__button {
+display: flex;
+flex-wrap: wrap;
+flex: 1;
+
+&:hover {
+
+  .details__link{
+    pointer-events: visible;
+    background-color: #3465A3;  
+  }
+
+  .details__dropdown {
+    // opacity: 1;
+    display: flex;
+
+
+  }
+}
 }
 
 .details__sign {
@@ -49,8 +57,11 @@ font-weight: bold;
 width: 273px;
 flex: 1;
 flex-wrap: wrap;
-opacity: 0;
+// opacity: 0;
 pointer-events: none;
+display: none;
+
+
 
 }
 
