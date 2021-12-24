@@ -491,6 +491,7 @@ img {
     position: relative;
     background: url("../img/hero-background-tablets.png") center top/cover no-repeat;
     background-color: #1968B1;
+    height: 100%;
   }
 }
 
@@ -802,6 +803,11 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   color: #666666;
+}
+@media screen and (max-width: 768px) {
+  .section {
+    height: 100%;
+  }
 }
 
 .section__title {

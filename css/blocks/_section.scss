@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   color: #666666;
+
+  @include tablets {
+    height: 100%;
+  }
 }
 
 .section__title {

@@ -2,6 +2,9 @@ const sections = $('section');
 const display = $('.maincontent');
 const fixedMenu = $('.fixed-menu');
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 let inScroll = false;
 
 sections.first().addClass("active"); 
@@ -83,6 +86,10 @@ $(window).on("keydown", e =>{
   }
 })
 
+$('.wrapper').on("touchmove", e =>{
+  e.preventDefault();
+})
+
 $("[data-scroll-to]").on('click', e =>{
   e.preventDefault();
   const currentElem = $(e.currentTarget);
@@ -92,20 +99,23 @@ $("[data-scroll-to]").on('click', e =>{
   makeTransion(needSection.index())
 })
 
-
+if(isMobile){
 // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 
-  $("body").swipe( {
-    swipe: function(event, direction) 
-    {
-      const scroller = defineSection();
-      let scrollDirection = "";
+$("body").swipe( {
+  swipe: function(event, direction) 
+  {
+    const scroller = defineSection();
+    let scrollDirection = "";
 
-      if(direction == "up") scrollDirection = "next";
-      
+    if(direction == "up") scrollDirection = "next";
+    
 
-      if(direction == "down") scrollDirection = "prev";
-      
-      defineSection(scrollDirection);
-    }
-  });
+    if(direction == "down") scrollDirection = "prev";
+    
+    defineSection(scrollDirection);
+  }
+});
+
+}
+
