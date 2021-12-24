@@ -4,6 +4,23 @@
   right: 3%;
   z-index: $z-fixed-menu;
 
+  &--theme--dark {
+        .fixed-menu__item {    
+      &--active {
+        .fixed-menu__link {
+          border-color: #3A587E;
+        }
+      }
+    }
+
+    .fixed-menu__link {
+      &:before {
+        content: "";
+        background: #3A587E;
+      }
+    }
+  }
+
   @include tablets {
     display: none;
   }

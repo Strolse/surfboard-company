@@ -367,8 +367,17 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -428,6 +437,13 @@ img {
   top: 33%;
   right: 3%;
   z-index: 100;
+}
+.fixed-menu--theme--dark .fixed-menu__item--active .fixed-menu__link {
+  border-color: #3A587E;
+}
+.fixed-menu--theme--dark .fixed-menu__link:before {
+  content: "";
+  background: #3A587E;
 }
 @media screen and (max-width: 768px) {
   .fixed-menu {
