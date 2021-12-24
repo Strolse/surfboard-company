@@ -7,7 +7,7 @@ openMenu.addEventListener("click", function(event){
   event.preventDefault();
   fullscreenMenu.style.display = "block";
   menu.style.display = "block";
-  console.log(fullscreenMenu);
+  // console.log(fullscreenMenu);
 })
 
 close.addEventListener("click", function(event){

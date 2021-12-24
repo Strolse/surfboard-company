@@ -95,9 +95,22 @@ $("[data-scroll-to]").on('click', e =>{
 
 // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 
-  // $("body").swipe( {
-  //   swipe: function(event, direction) 
-  //   {
-  //     alert(direction);
-  //   }
-  // });
+  $("body").swipe( {
+    swipe: function(event, direction) 
+    {
+      const scroller = defineSection();
+      let scrollDirection = "";
+
+      if(direction == "up") scrollDirection = "next";
+      
+
+      if(direction == "down") scrollDirection = "prev";
+      
+
+      scroller[scrollDirection]();
+
+      // console.log(scroller)
+
+      // alert(direction);
+    }
+  });
