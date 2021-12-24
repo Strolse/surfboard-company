@@ -1528,6 +1528,11 @@ img {
   position: relative;
   width: 102px;
 }
+@media screen and (max-width: 480px) {
+  .products-menu__title {
+    width: 5rem;
+  }
+}
 
 .products-menu__title-img {
   background: #000;
@@ -1551,6 +1556,11 @@ img {
   margin-bottom: 10px;
   line-height: 1;
 }
+@media screen and (max-width: 480px) {
+  .products-menu__title-text {
+    font-size: 2.2222222222rem;
+  }
+}
 
 .products-menu__content {
   -webkit-transition: width 0.5s;
@@ -1564,6 +1574,16 @@ img {
 
 .products-menu__content-main {
   padding: 31px 80px 31px 38px;
+}
+@media screen and (max-width: 768px) {
+  .products-menu__content-main {
+    padding: 42px 53px 42px 38px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-menu__content-main {
+    padding: 1.6111111111rem 1.9444444444rem 1.6111111111rem 2.1111111111rem;
+  }
 }
 
 .reviews__display {

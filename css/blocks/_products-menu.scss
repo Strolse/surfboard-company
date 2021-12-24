@@ -14,6 +14,10 @@
   text-decoration: none;
   position: relative;
   width: 102px;
+
+  @include phones {
+    width: rem(90px);
+  }
 }
 
 .products-menu__title-img {
@@ -34,6 +38,11 @@
   transform-origin: 0 0;
   margin-bottom: 10px;
   line-height: 1;
+
+  @include phones {
+    font-size: rem(40px);
+  }
+
 }
 
 .products-menu__content {
@@ -46,4 +55,12 @@
 
 .products-menu__content-main {
   padding: 31px 80px 31px 38px;
+
+  @include tablets {
+    padding: 42px 53px 42px 38px;
+  }
+
+  @include phones {
+    padding: rem(29px) rem(35px) rem(29px) rem(38px);
+  }
 }
