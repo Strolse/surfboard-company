@@ -106,11 +106,6 @@ $("[data-scroll-to]").on('click', e =>{
 
       if(direction == "down") scrollDirection = "prev";
       
-
-      scroller[scrollDirection]();
-
-      // console.log(scroller)
-
-      // alert(direction);
+      defineSection(scrollDirection);
     }
   });
