@@ -662,9 +662,32 @@
             </div>
           </div>
         </section>
-        <section class="section" data-fixedmenu-theme="dark" data-section-id="video">
+        <section class="section player-section" data-fixedmenu-theme="dark" data-section-id="video">
           <div class="container">
             <h2 class="section__title">Как мы работаем</h2>
+            <div class="player-section__container">
+              <div class="player">
+                <div class="player__wrapper">
+                  <div class="player__field" id="yt-player"></div>
+                  <div class="player__splash">
+                  </div>
+                </div>
+                <div class="player__controls">
+                  <button class="player__start">
+                    <svg class="player__start-sign" width="12" height="17">
+                      <use xlink:href="./sprite.svg#start"></use>
+                    </svg>
+                  </button>
+                  <div class="player__playback">
+                    <button class="player__playback-button"></button>
+                  </div>
+                  <div class="player__duration">
+                    <span class="player__duration-completed">0:00</span>
+                    <span class="player__duration-estimate">0:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="section order-section" data-fixedmenu-theme="white" data-section-id="order">
@@ -877,6 +900,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
   <script src="./js/ops.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./js/player.js"></script>
 </body>
 
 </html>

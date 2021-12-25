@@ -491,7 +491,6 @@ img {
     position: relative;
     background: url("../img/hero-background-tablets.png") center top/cover no-repeat;
     background-color: #1968B1;
-    height: 100%;
   }
 }
 
@@ -803,11 +802,6 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   color: #666666;
-}
-@media screen and (max-width: 768px) {
-  .section {
-    height: 100%;
-  }
 }
 
 .section__title {
@@ -1768,6 +1762,128 @@ img {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.player-section {
+  background: #F8FAF9;
+}
+
+.player-section__container {
+  max-width: 662px;
+  margin: 0 auto;
+}
+
+.player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  width: 14px;
+  height: 16px;
+}
+.player.paused .player__start:after, .player.paused .player__start:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+}
+.player.paused .player__start:after {
+  right: 0;
+}
+.player.paused .player__start::before {
+  left: 0;
+}
+.player.paused .player__start .player__start-sign {
+  fill: transparent;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  background: url("../img/player/player-splash.jpg") center center/cover no-repeat;
+}
+.player__splash:before {
+  content: "";
+  background: url("../img/player/splash-sign.png") center center/cover no-repeat;
+  display: block;
+  width: 76px;
+  height: 110px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 42%;
+}
+
+.player__controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 35px;
+  background-color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+}
+
+.player__start {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.player__start-sign {
+  fill: #fff;
+}
+
+.player__playback {
+  position: relative;
+  height: 16px;
+  width: 446px;
+  cursor: pointer;
+}
+.player__playback:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #626262;
+  right: 0;
+  left: 0;
+  height: 6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.player__playback-button {
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #626262;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
 }
 
 .order-section {

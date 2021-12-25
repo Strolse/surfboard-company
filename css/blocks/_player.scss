@@ -1,0 +1,130 @@
+.player-section__container {
+  max-width: 662px;
+
+  margin: 0 auto;
+}
+
+.player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &.active{
+    .player__splash {
+      display: none;
+    }
+  }
+
+  &.paused{
+    .player__start {
+      width: 14px;
+      height: 16px;
+
+      &:after,
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 5px;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+      }
+
+      &:after {
+        right: 0;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      .player__start-sign {
+        fill: transparent;
+      }
+
+    }
+  }
+}
+
+.player__field {
+  // height: 392px;
+  // width: 662px
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;  
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  background: url("../img/player/player-splash.jpg") center center / cover no-repeat;
+
+  &:before {
+    content: "";
+    background: url("../img/player/splash-sign.png") center center / cover no-repeat;
+    display: block;
+    width: 76px;
+    height: 110px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 42%;
+  }
+}
+
+
+.player__controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 35px;
+  background-color: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.player__start {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.player__start-sign {
+  fill: #fff;
+}
+
+.player__playback {
+  position: relative;
+  height: 16px;
+  width: 446px;
+  cursor: pointer;
+
+  &:before {
+    content:"";
+    display: block;
+    position: absolute;
+    background: #626262;
+    right: 0;
+    left: 0;
+    height: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.player__playback-button{
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #626262;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+}
