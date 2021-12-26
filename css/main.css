@@ -2139,7 +2139,11 @@ img {
 
 .adress {
   position: relative;
-  background: url("../img/map.jpg") center bottom/cover no-repeat;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
 }
 
 .footer__container {
