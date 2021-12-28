@@ -4,7 +4,8 @@ const init = () =>{
   map = new ymaps.Map("map", {
     center: [55.751774, 37.593535],
     zoom: 14,
-    controls: []
+    controls: [
+    ]
   });
 
   const myPlacemark = new ymaps.Placemark([55.749081, 37.604367], {}, {
@@ -16,7 +17,7 @@ const init = () =>{
   });
 
   map.geoObjects.add(myPlacemark); 
-
+  map.behaviors.digsable('scrollZoom');
 }
 
 
