@@ -662,28 +662,38 @@
             </div>
           </div>
         </section>
-        <section class="section player-section" data-fixedmenu-theme="dark" data-section-id="video">
-          <div class="container">
+        <section class="section video" data-fixedmenu-theme="dark" data-section-id="video">
+          <div class="container video__container">
             <h2 class="section__title">Как мы работаем</h2>
-            <div class="player-section__container">
-              <div class="player">
-                <div class="player__wrapper">
-                  <div class="player__field" id="yt-player"></div>
-                  <div class="player__splash">
+            <div class="video__wrapper">
+              <div class="video__box">
+                <video src="./video/surf.mp4" class="video__player" id="player" poster="./img/player/player-splash.jpg">
+                  <source src="./video/surf.mp4" type="video/mp4">
+                </video>
+                <button class="video__player-img">
+                  <svg class="video__button-img play">
+                    <use xlink:href="./sprite.svg#start"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="video__toolbar">
+                <div class="duration">
+                  <div class="duration__button-wrap">
+                    <button class="duration__img play">
+                    </button>
+                  </div>
+                  <div class="duration__length-wrap">
+                    <input type="range" class="duration__length range-control" id="durationLevel"> 
                   </div>
                 </div>
-                <div class="player__controls">
-                  <button class="player__start">
-                    <svg class="player__start-sign" width="12" height="17">
-                      <use xlink:href="./sprite.svg#start"></use>
+                <div class="sound">
+                  <button class="sound__button">
+                    <svg class="sound__elem" width="14" height="17">
+                      <use xlink:href="./sprite.svg#volume"></use>
                     </svg>
                   </button>
-                  <div class="player__playback">
-                    <button class="player__playback-button"></button>
-                  </div>
-                  <div class="player__duration">
-                    <span class="player__duration-completed">0:00</span>
-                    <span class="player__duration-estimate">0:00</span>
+                  <div class="sound__volume">
+                    <input type="range" class="sound__length range-control" id="soundLevel">
                   </div>
                 </div>
               </div>
@@ -900,7 +910,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
   <script src="./js/ops.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
   <script src="./js/player.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="./js/map.js"></script>

@@ -1,123 +1,113 @@
-let player;
-const playerContainer = $('.player');
+const playButton = document.querySelector('.video__player-img');
+const video = document.getElementById('player');
+const playControlButton = document.querySelector('.duration__img');
+const videoWrapper = document.querySelector('.video__wrapper');
+const soundButton = document.querySelector('.sound');
+ 
 
-let eventsInit = () => {
-  $('.player__start').on('click', e =>{
-    e.preventDefault();
+let durationControl;
+let soundControl;
+let intervalId;
+let soundLevel;
 
-    const button = $(e.currentTarget);
 
-    if(playerContainer.hasClass('paused')){
-      player.pauseVideo()
-    } else {
-      player.playVideo();
+video.addEventListener('loadeddata', () =>{
+  video.addEventListener('click', playStop);
+
+  videoWrapper.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('play')){
+      playStop();
+
     }
   })
+  durationControl = document.getElementById('durationLevel');
+  durationControl.addEventListener('input', setVideoDuration);
 
-  $('.player__playback').on('click', e =>{
-    const bar = $(e.currentTarget);
-    const clickedPosition = e.originalEvent.layerX;
-    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-    const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+  durationControl.min = 0;
+  durationControl.value = 0;
 
-    $('.player__playback-button').css({
-      left: `${newButtonPositionPercent}%`
-    })
-    player.seekTo(newPlaybackPositionSec);
+  durationControl.max = video.duration;
 
-    console.log(clickedPosition)
+  video.addEventListener('ended', function(){
+    playButton.classList.toggle('video__player-img--active');
+    video.currentTime = 0;
+    playControlButton.classList.remove('active');
+    clearInterval(intervalId);
   })
 
-  $('.player__splash').on("click", e =>{
-    player.playVideo();
-  })
+  let soundControl = document.querySelector('.sound__button');
+  soundControl.addEventListener('click', soundOf);
 
-  // $('.player__splash-sign').on("click", e =>{
-  //   player.playVideo();
-  // })
-}
+  soundLev = document.getElementById('soundLevel');
+  soundLev.addEventListener('input', changeSoundVolume);
 
-const formatTime = (timeSec) =>{
-  const roundTime = Math.round(timeSec);
-  const minutes = addZero(Math.floor(roundTime / 60));
-  const seconds = addZero(roundTime - minutes * 60);
+  soundLev.min = 0;
+  soundLev.max = 10;
 
-  function addZero(num){
-    return num < 10 ? `0${num}` : num;
+  soundLev.value =  soundLev.max;
+
+
+});
+
+function playStop() {
+  playButton.classList.toggle('video__player-img--active');
+  if(video.paused) {
+    video.play();
+    intervalId = setInterval(updateDuration, 1000 / 60);
+    playControlButton.classList.add('active');
+  } else {
+    video.pause();
+    clearInterval(intervalId);
+    playControlButton.classList.remove('active');
   }
 
-  return `${minutes} : ${seconds}`;
+
 }
 
-const onPlayerReady = () =>{
-  const durationSec = player.getDuration();
-  let interval;
+function setVideoDuration() {
+  video.currentTime = durationControl.value;
+  updateDuration();
+}
 
-  $('.player__duration-estimate').text(formatTime(durationSec));
+function updateDuration() {
+  durationControl.value = video.currentTime;
 
-  if(typeof interval !== 'undefined'){
-    clearInterval(interval);
+  let step = video.duration / 100;
+  let percent = video.currentTime / step;
+
+  durationControl.style.background = `linear-gradient(90deg, #FEDB3F 0%, #FEDB3F ${percent}%, #626262 ${percent}%)`;
+
+}
+
+function soundOf () {
+  if (video.volume === 0) {
+    video.volume = soundLevel;
+    soundLev.value = soundLevel * 10;
+    soundButton.classList.remove('active');
+  } else {
+    soundLevel = video.volume;
+    video.volume = 0;
+    soundLev.value = 0;
+    soundButton.classList.add('active');
   }
-
-  interval = setInterval(() => {
-    const completedSec = player.getCurrentTime();
-
-    const completedPercent = (completedSec / durationSec) * 100;
-
-    $('.player__playback-button').css({
-      left: `${completedPercent}%`
-    })
-
-    $('.player__duration-completed').text(formatTime(completedSec));
-
-}, 1000)
-};
-
-const onPlayerStateChange = event =>{
-/*
--1 – воспроизведение видео не началось
-0 – воспроизведение видео завершено
-1 – воспроизведение
-2 – пауза
-3 – буферизация
-5 – видео находится в очереди
-}
-*/
-
-switch (event.data){
-  case 1:
-  playerContainer.addClass('active');
-  playerContainer.addClass('paused');
-
-  break;
-
-  case 2:
-    playerContainer.removeClass('active');
-    playerContainer.removeClass('paused');
-
-  break;
-}
 }
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("yt-player", {
-    height: "392",
-    width: "662",
-    videoId: "HAFYdg2JENM",
+function changeSoundVolume() {
 
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    },
-    playerVars: {
-      controls: 0,
-      disablekb: 0,
-      showinfo: 0,
-      rel: 0,
-      modestbranding: 0,
-      autoplay: 0
-    }
-  });
+  video.volume = soundLev.value / 10;
+  if (video.volume === 0) {
+    soundButton.classList.add('active');
+  } else {
+    soundButton.classList.remove('active');
+  }
 }
 
-eventsInit();
+function updateSoundVolume() {
+  soundLev.value = video.volume;
+
+  let step = video.volume / 10;
+  let percent = video.currentTime / step;
+
+  durationControl.style.background = `linear-gradient(90deg, #FEDB3F 0%, #FEDB3F ${percent}%, #626262 ${percent}%)`;
+
+}
