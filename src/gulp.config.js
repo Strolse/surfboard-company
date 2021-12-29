@@ -6,6 +6,6 @@ module.exports = {
 
   // ],
   // JS_LIBS: [
-  //   "node_modules/jquery/dist/jquery.js"
+  //   "src/scripts/lib/jquery-3.6.0.min.js"
   // ]
 }

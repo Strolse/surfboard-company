@@ -32,13 +32,13 @@ task('clean', () => {
 task('styles', () => {
   return src([
     // ...STYLES_LIBS,
-    `${SRC_PATH}/styles/main.scss`
+    `${SRC_PATH}/css/main.scss`
   ])
   .pipe(gulpif(env == "dev", sourcemaps.init()))
   .pipe(concat('main.min.scss'))
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
-  .pipe(px2rem())
+  // .pipe(px2rem())
   .pipe(gulpif(env == "dev", autoprefixer({
     cascade: false
   }))
@@ -88,6 +88,16 @@ task('icons', () => {
   .pipe(dest(`${DIST_PATH}/img/icons`))
 });
 
+task('copy:images', () =>{
+  return src(`${SRC_PATH}/img/**/*.*`)
+  .pipe(dest(`${DIST_PATH}/img/`))
+})
+
+task('copy:video', () =>{
+  return src(`${SRC_PATH}/video/**/*.*`)
+  .pipe(dest(`${DIST_PATH}/video/`))
+})
+
 task('server', () => {
   browserSync.init({
       server: {
@@ -97,18 +107,20 @@ task('server', () => {
 });
 
 task('watch', () => {
-  watch(`./${SRC_PATH}/styles/**/*`, series('styles'))
+  watch(`./${SRC_PATH}/css/**/*`, series('styles'))
   watch(`./${SRC_PATH}/*.html`, series('copy:html'))
   watch(`./${SRC_PATH}/*.js`, series('scripts'))
+  watch(`./${SRC_PATH}/img/**/*.*`, series('copy:images')) 
+  watch(`./${SRC_PATH}/video/**/*.*`, series('copy:video')) 
   watch(`./${SRC_PATH}/img/icons/*.svg`, series('icons'))  
 })
 
 task('default',
  series('clean', 
- parallel('copy:html', 'styles', 'scripts', 'icons'), 
+ parallel('copy:html', 'styles', 'copy:images', 'copy:video', 'scripts', 'icons'), 
  parallel('watch', 'server')));
 
  task('build',
  series('clean', 
- parallel('copy:html', 'styles', 'scripts', 'icons') 
+ parallel('copy:html', 'styles', 'copy:images', 'copy:video', 'scripts', 'icons') 
  ));
