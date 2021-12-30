@@ -12,5 +12,5 @@
   $('#arrow-prev').on('click', (e) =>{
     e.preventDefault();
     slider.goToPrevSlide();
-  })
+  });
 

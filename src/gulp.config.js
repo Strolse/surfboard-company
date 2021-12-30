@@ -6,6 +6,10 @@ module.exports = {
 
   // ],
   // JS_LIBS: [
-  //   "src/scripts/lib/jquery-3.6.0.min.js"
+  //   "node_modules/jquery/dist/jquery.js",
+  //   "node_modules/bxslider/dist/jquery.bxslider.js",
+  //   "node_modules/fancybox/dist/js/jquery.fancybox.js",
+  //   "node_modules/jquery-touchswipe/jquery.touchSwipe.js",
+  //   "node_modules/mobile-detect/mobile-detect.js"
   // ]
 }

@@ -24,7 +24,7 @@
       fullscreenMenu.style.display = "none";
       menu.style.display = "none";
     }
-  })
+  });
   
 
 

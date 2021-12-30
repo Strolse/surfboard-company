@@ -64,6 +64,6 @@
   $(".app-modal-close").on('click', e =>{
     e.preventDefault();
     $.fancybox.close();
-  })
+  });
 
 

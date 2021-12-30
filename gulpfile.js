@@ -34,18 +34,18 @@ task('styles', () => {
     // ...STYLES_LIBS,
     `${SRC_PATH}/css/main.scss`
   ])
-  .pipe(gulpif(env == "dev", sourcemaps.init()))
+  .pipe(gulpif(env === "dev", sourcemaps.init()))
   .pipe(concat('main.min.scss'))
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
   // .pipe(px2rem())
-  .pipe(gulpif(env == "dev", autoprefixer({
+  .pipe(gulpif(env === "dev", autoprefixer({
     cascade: false
   }))
   )
-  .pipe(gulpif(env == "prod", gcmq()))
-  .pipe(gulpif(env == "prod", cleanCSS()))
-  .pipe(gulpif(env == "dev", sourcemaps.write()))
+  .pipe(gulpif(env === "prod", gcmq()))
+  .pipe(gulpif(env === "prod", cleanCSS()))
+  .pipe(gulpif(env === "dev", sourcemaps.write()))
   .pipe(dest(DIST_PATH))
   .pipe(reload({stream: true }));
 });
@@ -55,13 +55,13 @@ task('scripts', () => {
     // ...JS_LIBS, 
     `${SRC_PATH}/scripts/*.js`
   ])
-  .pipe(gulpif(env == "dev", sourcemaps.init()))
+  .pipe(gulpif(env === "dev", sourcemaps.init()))
   .pipe(concat('main.min.js'), {newLine: ";"})
-  .pipe(gulpif(env == "prod", babel({
+  .pipe(gulpif(env === "prod", babel({
     presets: ['@babel/env']
 })))
-  .pipe(gulpif(env == "prod", uglify()))
-  .pipe(gulpif(env == "dev", sourcemaps.write()))
+  .pipe(gulpif(env === "prod", uglify()))
+  .pipe(gulpif(env === "dev", sourcemaps.write()))
   .pipe(dest(`${DIST_PATH}`))
   .pipe(reload({stream: true }));
 

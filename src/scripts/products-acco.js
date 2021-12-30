@@ -1,4 +1,4 @@
-
+;(function(){
   const whatWidth = (item) =>{
     let reqItemWidth = 0;
   
@@ -63,7 +63,7 @@
     const currentElem = $(e.currentTarget);
     const item = currentElem.closest('.products-menu__item');
     const openedItem = item.hasClass('active');
-    container = item.closest('.products-menu');
+    const container = item.closest('.products-menu');
   
     if(openedItem){
       closeElems(container)
@@ -72,5 +72,6 @@
       openElem(item)
     }
   
-  })
+  });
 
+})();

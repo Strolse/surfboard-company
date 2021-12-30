@@ -15,4 +15,4 @@
   
     needItem.addClass('active').siblings().removeClass('active');
     chosenItem.addClass('active').siblings().removeClass('active');
-  })
+  });

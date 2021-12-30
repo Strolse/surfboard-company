@@ -26,6 +26,10 @@ body {
   overflow: hidden;
 }
 
+.wrapper__content {
+  height: 100%;
+}
+
 .maincontent {
   height: 100%;
   transition: transform 1s;

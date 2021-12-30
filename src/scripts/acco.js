@@ -40,5 +40,5 @@
         triangle.attr('xlink:href', './img/icons/sprite.svg#triangle-up');
     
       }
-    })
+    });
 

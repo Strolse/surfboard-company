@@ -1,4 +1,4 @@
-
+;
   const playButton = document.querySelector('.video__player-img');
   const video = document.getElementById('player');
   const playControlButton = document.querySelector('.duration__img');
@@ -10,6 +10,7 @@
   let soundControl;
   let intervalId;
   let soundLevel;
+  let soundLev;
   
   
   video.addEventListener('loadeddata', () =>{
@@ -110,6 +111,6 @@
   
     durationControl.style.background = `linear-gradient(90deg, #FEDB3F 0%, #FEDB3F ${percent}%, #626262 ${percent}%)`;
   
-  }
+  };
 
 
